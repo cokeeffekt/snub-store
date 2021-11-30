@@ -1,0 +1,23 @@
+{
+  "name": "snub-store",
+  "version": "1.0.0",
+  "description": "Snub simple key val storage module",
+  "main": "snub-store.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cokeeffekt/snub-store.git"
+  },
+  "author": "Patrik Hartwig",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cokeeffekt/snub-store/issues"
+  },
+  "homepage": "https://github.com/cokeeffekt/snub-store#readme",
+  "devDependencies": {
+    "prettier": "^2.3.1",
+    "snub": "^3.0.1"
+  }
+}
