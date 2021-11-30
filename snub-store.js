@@ -2,6 +2,7 @@ module.exports = function (config) {
   config = Object.assign(
     {
       namespace: '',
+      onReady: (_) => {},
     },
     config || {}
   );
@@ -14,6 +15,7 @@ module.exports = function (config) {
 
     snub.store = new Proxy(localStore, {
       get: function (target, prop) {
+        if (!target[prop]) return undefined;
         return JSON.parse(target[prop]);
       },
       set: async function (target, prop, value) {
@@ -52,6 +54,7 @@ module.exports = function (config) {
       for (var pkey of Object.keys(persisted)) {
         localStore[pkey] = persisted[pkey];
       }
+      if (init) config.onReady();
     }
   };
 };

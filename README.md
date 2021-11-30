@@ -7,6 +7,21 @@ Snub simple synced key val storage
 Allow you to store strings, numbers, arrays and non complex object to a persistent store live and accessible on all instances.
 Before anyone gets any brilliant ideas to use this for caching, know that all the values are kept in memory to maintain syncrhonous access.
 
+`npm install snub`
+`npm install snub-cron`
+
+```javascript
+const Snub = require('snub');
+const SnubCron = require('snub-store');
+
+const snub = new Snub();
+const SnubCron = new SnubStore({
+  namespace: 'string', //optional in case you have mutliple snub instances.
+  onReady: fn(){}, // function that is called after first sync on instance boot
+});
+
+```
+
 ## Set a key store
 
 ```javascript

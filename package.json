@@ -1,6 +1,6 @@
 {
   "name": "snub-store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Snub simple key val storage module",
   "main": "snub-store.js",
   "scripts": {
